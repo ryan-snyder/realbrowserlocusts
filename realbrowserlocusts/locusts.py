@@ -41,7 +41,7 @@ class ChromeLocust(RealBrowserLocust):
             _LOGGER.info('Using proxy: ' + self.proxy_server)
             options.add_argument('proxy-server={}'.format(self.proxy_server))
         if self.load_testing:
-            options.add_argument('user-agent={}'.format(self.load_testing)
+            options.add_argument('user-agent={}'.format(self.load_testing))
         self.client = RealBrowserClient(
             webdriver.Chrome(chrome_options=options),
             self.timeout,
